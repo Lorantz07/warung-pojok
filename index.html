@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Warung Pojok - Makanan Rumahan yang Enak, Murah dan Bersih. Seblak, Bakso, Tekwan, dan aneka minuman segar.">
+  <meta name="theme-color" content="#181818">
+  <title>Warung Pojok - Makanan Rumahan Enak, Murah & Bersih</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== LOADING SCREEN ==================== -->
+  <div id="loadingScreen" class="loading-screen" role="status" aria-label="Memuat halaman">
+    <div class="loader-content">
+      <div class="loader-logo">
+        <span class="loader-icon"><i class="fas fa-utensils"></i></span>
+        <h2>Warung Pojok</h2>
+      </div>
+      <div class="loader-bar-wrapper">
+        <div class="loader-bar" id="loaderBar"></div>
+      </div>
+      <p class="loader-text">Menyiapkan menu terbaik...</p>
+    </div>
+  </div>
+
+  <!-- ==================== SCROLL PROGRESS BAR ==================== -->
+  <div id="scrollProgress" class="scroll-progress" role="progressbar" aria-label="Progress halaman">
+    <div class="scroll-progress-fill"></div>
+  </div>
+
+  <!-- ==================== BACK TO TOP ==================== -->
+  <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas" title="Kembali ke atas">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ==================== HEADER / NAVIGATION ==================== -->
+  <header id="header" class="header" role="banner">
+    <nav class="navbar container" role="navigation" aria-label="Navigasi utama">
+      <a href="#" class="nav-brand" aria-label="Warung Pojok - Beranda">
+        <i class="fas fa-store"></i>
+        <span>Warung <strong>Pojok</strong></span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li role="none"><a href="#menu" class="nav-link" role="menuitem"><i class="fas fa-utensils"></i> Menu</a></li>
+        <li role="none"><a href="#minuman" class="nav-link" role="menuitem"><i class="fas fa-mug-hot"></i> Minuman</a></li>
+        <li role="none"><a href="#gallery" class="nav-link" role="menuitem"><i class="fas fa-images"></i> Galeri</a></li>
+        <li role="none"><a href="#testimoni" class="nav-link" role="menuitem"><i class="fas fa-star"></i> Testimoni</a></li>
+        <li role="none"><a href="#lokasi" class="nav-link" role="menuitem"><i class="fas fa-location-dot"></i> Lokasi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="hero" aria-label="Hero section">
+    <!-- Doodle decorations -->
+    <div class="doodle doodle-1" aria-hidden="true">✦</div>
+    <div class="doodle doodle-2" aria-hidden="true">✧</div>
+    <div class="doodle doodle-3" aria-hidden="true">○</div>
+    <div class="doodle doodle-4" aria-hidden="true">✽</div>
+    <div class="doodle doodle-5" aria-hidden="true">♪</div>
+    <div class="doodle doodle-6" aria-hidden="true">♥</div>
+    <div class="doodle doodle-7" aria-hidden="true">✿</div>
+    <div class="doodle doodle-8" aria-hidden="true">✦</div>
+
+    <div class="hero-content container">
+      <div class="hero-text">
+        <div class="hero-badge">#WarungPojok</div>
+        <h1 class="hero-title">
+          <span class="typing-text" id="typingText"></span>
+          <span class="typing-cursor">|</span>
+        </h1>
+        <p class="hero-subtitle">Makanan Rumahan yang Enak, <span class="highlight">Murah</span> dan <span class="highlight">Bersih.</span></p>
+        <p class="hero-desc">Nikmati cita rasa masakan rumahan dengan harga merakyat. Dibuat fresh setiap hari dari bahan-bahan berkualitas.</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">
+            <i class="fas fa-book-open"></i> Lihat Menu
+          </a>
+          <a href="#lokasi" class="btn btn-secondary">
+            <i class="fas fa-phone"></i> Hubungi Kami
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number counter" data-target="10">0</span>
+            <span class="stat-plus">+</span>
+            <span class="stat-label">Menu</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number counter" data-target="100">0</span>
+            <span class="stat-plus">+</span>
+            <span class="stat-label">Pelanggan</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number counter" data-target="5">0</span>
+            <span class="stat-plus">★</span>
+            <span class="stat-label">Rating</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card food-card-illustration">
+          <div class="hc-header">
+            <div class="hc-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="hc-title">Menu Best Seller</div>
+          </div>
+          <div class="hc-body">
+            <div class="hc-item">
+              <div class="hc-item-icon">🍜</div>
+              <div class="hc-item-text">
+                <span class="hc-item-name">Seblak Spesial</span>
+                <span class="hc-item-price">Rp 10K</span>
+              </div>
+            </div>
+            <div class="hc-item">
+              <div class="hc-item-icon">🥠</div>
+              <div class="hc-item-text">
+                <span class="hc-item-name">Basreng Chili Oil</span>
+                <span class="hc-item-price">Rp 5K</span>
+              </div>
+            </div>
+            <div class="hc-item">
+              <div class="hc-item-icon">🧊</div>
+              <div class="hc-item-text">
+                <span class="hc-item-name">Pop Ice</span>
+                <span class="hc-item-price">Rp 5K</span>
+              </div>
+            </div>
+          </div>
+          <div class="hc-footer">
+            <span class="hc-footer-text"><i class="fas fa-clock"></i> Buka Setiap Hari</span>
+            <span class="hc-footer-icon"><i class="fas fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C360,60 720,0 1440,30 L1440,60 L0,60 Z" fill="#181818"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==================== MENU MAKANAN SECTION ==================== -->
+  <section id="menu" class="section menu-section" aria-label="Menu Makanan">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-icon"><i class="fas fa-utensils"></i></span>
+        <h2 class="section-title">Menu <span class="highlight">Warung Pojok</span></h2>
+        <div class="section-divider">
+          <span></span><i class="fas fa-star"></i><span></span>
+        </div>
+        <p class="section-desc">Pilihan menu rumahan favorit yang siap memanjakan lidahmu!</p>
+      </div>
+
+      <div class="menu-board reveal">
+        <div class="menu-board-header">
+          <div class="mbh-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <h3 class="mbh-title"><i class="fas fa-utensils"></i> Menu Makanan</h3>
+          <div class="mbh-line"></div>
+        </div>
+        <div class="menu-board-body">
+          <!-- Seblak -->
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon">🍜</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Seblak <span class="menu-item-sub">(sesuai topping)</span></h4>
+                <p class="menu-item-desc">Kerupuk basah dengan ceker, bakso, telur, sayuran, dan topping pilihan.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Mulai Rp 10K</span>
+              <div class="menu-item-emoji">🌶️🔥</div>
+            </div>
+          </div>
+          <!-- Bakso Kuah -->
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon">🥘</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Bakso Mercon</h4>
+                <p class="menu-item-desc">Bakso Mercon yang siap membuat lidah anda terbakar.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 5K</span> 
+              <div class="menu-item-emoji">🍲</div>
+            </div>
+          </div>
+          <!-- Tekwan -->
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon">🦐</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Tekwan</h4>
+                <p class="menu-item-desc">Ikan khas Palembang dengan kuah udang segar dan bihun.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 12K</span>
+              <div class="menu-item-emoji">🍤</div>
+            </div>
+          </div>
+          <!-- Gorengan Chili Oil -->
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon">🥠</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Gorengan Chili Oil</h4>
+                <p class="menu-item-desc">Aneka gorengan crispy dengan saus chili oil pedas mantap.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 8K</span>
+              <div class="menu-item-emoji">🌶️</div>
+            </div>
+          </div>
+          <!-- Mie Nyemek -->
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon">🍝</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Mie Nyemek</h4>
+                <p class="menu-item-desc">Mie rebus setengah basah dengan bumbu pedas dan telur.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 7K</span>
+              <div class="menu-item-emoji">🍳</div> 
+            </div>
+          </div>
+          <!-- Mie Seafood -->
+          
+          </div>
+          <!-- Roti Goreng -->
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon">🥐</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Roti Bakar</h4>
+                <p class="menu-item-desc">Roti goreng isi coklat, keju, atau abon. Renyah di luar, lembut di dalam.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 5K</span>
+              <div class="menu-item-emoji">🧀</div>
+            </div>
+          </div>
+          <!-- Pempek -->
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon">🐟</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Sea Food Bakaran</h4>
+                <p class="menu-item-desc">Bakaran Sea Food yang di padui dengan bumbu khas.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 5K</span>
+              <div class="menu-item-emoji">🫕</div>
+            </div>
+          </div>
+          <!-- Kentang Goreng -->
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon">🍟</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Kentang Goreng</h4>
+                <p class="menu-item-desc">Kentang goreng crispy dengan saus sambal dan mayonaise.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 5K</span>
+              <div class="menu-item-emoji">🥫</div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-board-footer">
+          <i class="fas fa-fire"></i> Pesan sekarang, rasakan kehangatan masakan rumahan!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MINUMAN SECTION ==================== -->
+  <section id="minuman" class="section minuman-section" aria-label="Aneka Minuman">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-icon"><i class="fas fa-mug-hot"></i></span>
+        <h2 class="section-title">Aneka <span class="highlight">Minuman</span></h2>
+        <div class="section-divider">
+          <span></span><i class="fas fa-star"></i><span></span>
+        </div>
+        <p class="section-desc">Pelepas dahaga dengan minuman segar pilihan kami!</p>
+      </div>
+
+      <div class="menu-board drink-board reveal">
+        <div class="menu-board-header">
+          <div class="mbh-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <h3 class="mbh-title"><i class="fas fa-mug-hot"></i> Aneka Minuman</h3>
+          <div class="mbh-line"></div>
+        </div>
+        <div class="menu-board-body">
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon drink-icon">🧊</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Pop Ice</h4>
+                <p class="menu-item-desc">Minuman bubuk instan dengan berbagai pilihan rasa favorit.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 5K</span>
+              <div class="drink-thumb" style="background: linear-gradient(135deg, #f093fb, #f5576c);">🥤</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon drink-icon">🍵</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Es Teh</h4>
+                <p class="menu-item-desc">Teh manis segar dengan es batu, pelepas dahaga klasik.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 4K</span>
+              <div class="drink-thumb" style="background: linear-gradient(135deg, #a8e063, #56ab2f);">🫖</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon drink-icon">🟢</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Es Matcha</h4>
+                <p class="menu-item-desc">Minuman matcha asli dengan susu segar, creamy dan nikmat.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 6K</span>
+              <div class="drink-thumb" style="background: linear-gradient(135deg, #11998e, #38ef7d);">🧃</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon drink-icon">🍵</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Kopi Hitam</h4>
+                <p class="menu-item-desc">kehangatan Kopi Hitam yang tiada tara</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 5K</span>
+              <div class="drink-thumb" style="background: linear-gradient(135deg, #654ea3, #eaafc8);">🍵</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon drink-icon">🍊</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Es Jeruk</h4>
+                <p class="menu-item-desc">Jeruk peras segar dengan es, kaya vitamin C.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 5K</span>
+              <div class="drink-thumb" style="background: linear-gradient(135deg, #f2994a, #f2c94c);">🍊</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-info">
+              <div class="menu-item-icon drink-icon">🥛</div>
+              <div class="menu-item-detail">
+                <h4 class="menu-item-name">Es Milo</h4>
+                <p class="menu-item-desc">Minuman coklat malt klasik, segar dan penuh energi.</p>
+              </div>
+            </div>
+            <div class="menu-item-right">
+              <span class="menu-item-badge">Rp 6K</span>
+              <div class="drink-thumb" style="background: linear-gradient(135deg, #c31432, #240b36);">🥛</div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-board-footer">
+          <i class="fas fa-mug-saucer"></i> Segarkan harimu dengan minuman favorit!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== KENAPA MEMILIH KAMI ==================== -->
+  <section id="whyus" class="section whyus-section" aria-label="Kenapa Memilih Kami">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-icon"><i class="fas fa-heart"></i></span>
+        <h2 class="section-title">Kenapa <span class="highlight">Warung Kami?</span></h2>
+        <div class="section-divider">
+          <span></span><i class="fas fa-star"></i><span></span>
+        </div>
+        <p class="section-desc">Kami selalu mengutamakan kepuasan dan kenyamanan Anda!</p>
+      </div>
+
+      <div class="whyus-grid reveal">
+        <div class="whyus-card">
+          <div class="whyus-icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <h3>Harga Terjangkau</h3>
+          <p>Nikmati masakan rumahan dengan harga yang ramah di kantong. Cocok untuk pelajar dan pekerja.</p>
+        </div>
+        <div class="whyus-card">
+          <div class="whyus-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Bahan Segar</h3>
+          <p>Kami selalu menggunakan bahan-bahan segar dan berkualitas terbaik setiap harinya.</p>
+        </div>
+        <div class="whyus-card">
+          <div class="whyus-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Dibuat Saat Dipesan</h3>
+          <p>Setiap menu dimasak setelah Anda memesan, menjamin kesegaran dan kehangatan.</p>
+        </div>
+        <div class="whyus-card">
+          <div class="whyus-icon">
+            <i class="fas fa-hand-sparkles"></i>
+          </div>
+          <h3>Bersih & Higienis</h3>
+          <p>Kami menjaga kebersihan dapur dan area makan dengan standar tinggi.</p>
+        </div>
+        <div class="whyus-card">
+          <div class="whyus-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Cocok Semua Umur</h3>
+          <p>Menu kami ramah untuk semua kalangan, dari anak-anak hingga dewasa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALERI ==================== -->
+  <section id="gallery" class="section gallery-section" aria-label="Galeri">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-icon"><i class="fas fa-camera"></i></span>
+        <h2 class="section-title">Galeri <span class="highlight">Kuliner</span></h2>
+        <div class="section-divider">
+          <span></span><i class="fas fa-star"></i><span></span>
+        </div>
+        <p class="section-desc">Penampakan menu-menu favorit di Warung Pojok!</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item" data-title="Seblak Spesial" data-desc="Seblak dengan ceker, bakso, dan telur">
+          <div class="gallery-img">
+            <img src="picture/seblak.jpeg" alt="Seblak Spesial" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <h4>Seblak Spesial</h4>
+            <p>🌶️🔥</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Basreng" data-desc="Basreng dengan Chili Oil">
+          <div class="gallery-img">
+            <img src="picture/basreng.jpeg" alt="Bakso Kuah" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <h4>Basreng Chili Oil</h4>
+            <p>🧆</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Bakaran" data-desc="Bakaran Seafood">
+          <div class="gallery-img">
+            <img src="picture/sea food.jpeg" alt="Tekwan" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <h4>SeaFood Bakaran</h4>
+            <p>🍤</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Papeda" data-desc="Papeda dengan bumbu yang melimpah">
+          <div class="gallery-img">
+            <img src="picture/papeda.jpeg" alt="Mie Nyemek" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <h4>Papeda</h4>
+            <p>🍳</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Mie gelas" data-desc="Salah satu varian Mie Gelas">
+          <div class="gallery-img">
+            <img src="picture/mie gelas.jpeg" alt="Pempek" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <h4>Mie Gelas</h4>
+            <p>🫕</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Roti Bakar" data-desc="Roti Bakar isi coklat keju">
+          <div class="gallery-img">
+            <img src="picture/roti bakar.jpeg" alt="Roti Goreng" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <h4>Roti Bakar</h4>
+            <p>🧀</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Pop Ice" data-desc="Aneka Varian Pop Ice">
+            <div class="gallery-img">
+              <img src="picture/pop ice.webp" alt="Pop Ice" loading="lazy">
+            </div>
+            <div class="gallery-overlay">
+              <h4>Varian Pop Ice</h4>
+              <p>🧊</p>
+            </div>
+          </div>
+        <div class="gallery-item" data-title="Kentang Goreng" data-desc="Kentang goreng crispy">
+          <div class="gallery-img">
+            <img src="picture/kentang goreng.jpeg" alt="Kentang Goreng" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <h4>Kentang Goreng</h4>
+            <p>🍟</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Kopi Hitam" data-desc="Kopi Hitam Kapal Api">
+          <div class="gallery-img">
+            <img src="picture/kopi.jpg" alt="Kopi Hitam" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <h4>Kopi Hitam</h4>
+            <p>🍵</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-title="Es Matcha" data-desc="Matcha susu segar">
+          <div class="gallery-img">
+            <img src="picture/pop matcha.webp" alt="Es Matcha" loading="lazy">
+          </div>
+          <div class="gallery-overlay">
+            <h4>Es Matcha</h4>
+            <p>🟢</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MODAL GALERI ==================== -->
+  <div id="galleryModal" class="gallery-modal" role="dialog" aria-label="Detail galeri" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Tutup"><i class="fas fa-times"></i></button>
+      <div class="modal-visual" id="modalVisual">
+        <img id="modalImage" src="" alt="" class="modal-image">
+      </div>
+      <div class="modal-info">
+        <h3 id="modalTitle">Seblak Spesial</h3>
+        <p id="modalDesc">Seblak dengan ceker, bakso, dan telur</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TESTIMONI ==================== -->
+  <section id="testimoni" class="section testimoni-section" aria-label="Testimoni">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-icon"><i class="fas fa-quote-right"></i></span>
+        <h2 class="section-title">Apa Kata <span class="highlight">Mereka?</span></h2>
+        <div class="section-divider">
+          <span></span><i class="fas fa-star"></i><span></span>
+        </div>
+        <p class="section-desc">Kata-kata manis dari pelanggan setia Warung Pojok!</p>
+      </div>
+
+      <div class="testimoni-slider reveal" role="region" aria-label="Slider testimoni">
+        <div class="testimoni-track" id="testimoniTrack">
+          <div class="testimoni-card">
+            <div class="testimoni-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimoni-text">"Seblaknya enak banget, apalagi kalau ditambah topping ceker. Mantap!"</p>
+            <div class="testimoni-author">
+              <div class="testimoni-avatar" style="background: linear-gradient(135deg, #ff6b35, #f7931e);">R</div>
+              <div class="testimoni-name">
+                <strong>Rina</strong>
+                <span>Pelanggan Setia</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimoni-card">
+            <div class="testimoni-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimoni-text">"Harganya murah banget cocok buat anak kos. Aku suka banget!"</p>
+            <div class="testimoni-author">
+              <div class="testimoni-avatar" style="background: linear-gradient(135deg, #11998e, #38ef7d);">A</div>
+              <div class="testimoni-name">
+                <strong>Alip</strong>
+                <span>Siswa</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimoni-card">
+            <div class="testimoni-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimoni-text">"SeaFood nya enak banget tau! cobain deh di jamin ketagihan!"</p>
+            <div class="testimoni-author">
+              <div class="testimoni-avatar" style="background: linear-gradient(135deg, #c31432, #240b36);">L</div>
+              <div class="testimoni-name">
+                <strong>Lutpi</strong>
+                <span>Bocil</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimoni-card">
+            <div class="testimoni-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimoni-text">"Masakannya enak, bersih, dan tempatnya nyaman banget!"</p>
+            <div class="testimoni-author">
+              <div class="testimoni-avatar" style="background: linear-gradient(135deg, #654ea3, #eaafc8);">A</div>
+              <div class="testimoni-name">
+                <strong>Adi</strong>
+                <span>Mahasiswa</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimoni-card">
+            <div class="testimoni-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimoni-text">"Basreng Chili Oil nya juara! Pedasnya pas, porsinya banyak. Recommended!"</p>
+            <div class="testimoni-author">
+              <div class="testimoni-avatar" style="background: linear-gradient(135deg, #f093fb, #f5576c);">B</div>
+              <div class="testimoni-name">
+                <strong>Budi</strong>
+                <span>Pengunjung</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimoni-controls">
+          <button class="testi-btn testi-prev" id="testiPrev" aria-label="Sebelumnya"><i class="fas fa-chevron-left"></i></button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-btn testi-next" id="testiNext" aria-label="Selanjutnya"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LOKASI ==================== -->
+  <section id="lokasi" class="section lokasi-section" aria-label="Lokasi dan Kontak">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-icon"><i class="fas fa-location-dot"></i></span>
+        <h2 class="section-title">Lokasi & <span class="highlight">Kontak</span></h2>
+        <div class="section-divider">
+          <span></span><i class="fas fa-star"></i><span></span>
+        </div>
+        <p class="section-desc">Yuk mampir! Kami tunggu kedatanganmu!</p>
+      </div>
+
+      <div class="lokasi-grid reveal">
+        <div class="lokasi-info">
+          <div class="lokasi-card">
+            <div class="lokasi-card-icon"><i class="fas fa-map-pin"></i></div>
+            <div class="lokasi-card-text">
+              <h3>Alamat</h3>
+              <p>Ujung Aris<br>Kecamatan Widasari<br>Kabupaten Indramayu, Jawa Barat</p>
+            </div>
+          </div>
+          <div class="lokasi-card">
+            <div class="lokasi-card-icon"><i class="fas fa-clock"></i></div>
+            <div class="lokasi-card-text">
+              <h3>Jam Buka</h3>
+              <p>Senin - Minggu: <strong>08:00 - 18:30 WIB</strong></p>
+            </div>
+          </div>
+          <div class="lokasi-card">
+            <div class="lokasi-card-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="lokasi-card-text">
+              <h3>WhatsApp</h3>
+              <p><a href="https://wa.me/62895634730690" target="_blank" rel="noopener noreferrer">+62 895-6347-30690</a></p>
+            </div>
+          </div>
+          <a href="https://wa.me/62895634730690?text=Halo%20Warung%20Pojok%2C%20saya%20mau%20pesan!" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-wa">
+            <i class="fab fa-whatsapp"></i> Pesan Sekarang
+          </a>
+        </div>
+        <div class="lokasi-map">
+          <div class="map-placeholder">
+            <div class="map-icon"><i class="fas fa-map-location-dot"></i></div>
+            <h3>Warung Pojok</h3>
+            <p>Ujung Aris Blok Pintu Air</p>
+            <div class="map-coords"><i class="fas fa-crosshairs"></i> 6.4549506,108.2895253,16.75</div>
+            <a href="https://www.google.com/maps/search/Musholla+Al+anshor/@-6.454561,108.2894137,17z?hl=en&entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="map-link">
+              <i class="fas fa-directions"></i> Buka di Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <i class="fas fa-store"></i>
+          <h3>Warung <strong>Pojok</strong></h3>
+          <p>Makanan Rumahan yang Enak, Murah dan Bersih.</p>
+        </div>
+        <div class="footer-social">
+          <!-- <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a> -->
+          <a href="https://m.facebook.com/laelatul.fajriyah.54/" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.tiktok.com/@lailatul.fajriyah77" aria-label="TikTok" class="social-link"><i class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/62895634730690" aria-label="WhatsApp" class="social-link"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p>Terima kasih telah berkunjung. Sampai jumpa lagi! <i class="fas fa-smile"></i></p>
+        <p class="footer-copy">Warung Pojok &copy; 2024. Laelatul Fazriyah.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script src="script.js"></script>
+</body>
+</html>
